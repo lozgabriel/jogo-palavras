@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Palavras Typer</title>
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="center">Palavras Typer</h1>
+    <p class="frase center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ex sem, eleifend vitae consectetur in, elementum sed nisi. Nam sed nisi mauris. Nam sed nibh augue.</p>
+    
+    <div class="center">
+        <img id="spinner" src="img/spinner.gif" alt="spinner">
+        <p id="erro">Ocorreu um erro ao chamar o servidor</p>
+    </div>
+
+    <ul class="informacoes center">
+        <li>
+            <i class="small material-icons icones">description</i>
+            <span id="tamanho-frase"></span> palavras
+        </li>
+
+        <li>
+            <i class="small material-icons icones">query_builder</i>
+            <span id="tempo-digitacao">3</span> segundos
+        </li>
+    </ul>
+
+    <textarea class="campo-digitacao" cols="30" rows="10"></textarea>
+    <button id="botao-reiniciar">Reiniciar Jogo</button>
+    <button id="botao-placar">Mostrar Placar</button>
+    <button id="botao-frase">Trocar Frase</button>
+    <button id="botao-frase-id">Buscar Frase</button>
+    <input type="number" id="frase-id" min="0">
+    <button id="botao-salvar">Salvar Dados</button>
+
+    <ul class="center">
+        <li><span id="contador-caracteres">0</span> caracteres</li>
+        <li><span id="contador-palavras">0</span> palavras</li>
+    </ul>
+
+    <section class="placar">
+        <h3 class="center">Placar</h3>
+        <table class="centered bordered">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Nº Palavras</th>
+                    <th>Remover</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </section>
+</div>
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/placar.js"> </script>
+    <script src="js/frase.js"></script>
+</body>
+</html>

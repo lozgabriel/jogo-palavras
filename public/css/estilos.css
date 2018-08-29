@@ -1,0 +1,40 @@
+body{
+    overflow:scroll;
+}
+.campo-digitacao{
+    height: 150px;
+    border: 3px solid black;
+}
+
+.tempo-esgotado{
+    background: #ccc;
+}
+
+.icones{
+    vertical-align: middle;
+}
+
+.borda-correto{
+    border: 3px solid green;
+}
+
+.borda-errado{
+    border: 3px solid red;
+}
+
+.placar, #spinner{
+    display: none;
+}
+
+#erro{
+    color: red;
+    display: none;
+}
+
+#frase-id{
+    width: 30px;
+}
+
+#botao-salvar{
+    float: right;
+}
