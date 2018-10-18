@@ -22,9 +22,12 @@ function fraseAleatoria(){
 
 function trocaFraseAleatoria(response){
     var frase = $(".frase")
+    //math randon com response. length para pegar o valor total que estiver em response
+    //Math.floor para arredondar o valor
     var numeroAleatorio = Math.floor(Math.random() * response.length);
     frase.text(response[numeroAleatorio].texto);
 
+    //chama a função atualizaTamanhoFrase do MAIN.JS
     atualizaTamanhoFrase();
     atualizaTempo(response[numeroAleatorio].tempo);
 }

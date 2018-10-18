@@ -18,6 +18,7 @@ function atualizaTamanhoFrase(){
     tamanhoFrase.text(numPalavras);
 }
 
+// pega o atualizaTempo de frase.js
 function atualizaTempo(tempo){
     tempoInicial = tempo;
     $("#tempo-digitacao").text(tempo);
@@ -43,7 +44,7 @@ function inicializaCronometro(){
             $("#tempo-digitacao").text(tempoRestante);
             
             if(tempoRestante < 1){    
-                //Quando chegar a zero
+                //Quando chegar a zero o clearinterval irá parar o cronometro
                 clearInterval(cronometroID);
                 finalizaJogo();
             }
@@ -64,6 +65,7 @@ function inicializaBordas(){
 campo.on("input", function(){
     var frase = $(".frase").text();
     var digitado = campo.val();
+    //substr pega um pedaço da palavra da posição zero até o tamanho que eu digitei
     var comparavel = frase.substr(0, digitado.length);
     if(digitado == comparavel){
         campo.addClass("borda-correto");

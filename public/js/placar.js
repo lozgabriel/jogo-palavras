@@ -17,6 +17,7 @@ function inserePlacar(){
 }
 
 function scrollPlacar(){
+    // offset para pegar a posição do topo
     var posicaoPlacar = $(".placar").offset().top;
     $("html, body").animate(
     {
@@ -48,6 +49,7 @@ function removeLinha() {
 
     linha.fadeOut(1000);
     setTimeout(function() {
+        // remove para garantir que nao fique só no display none
         linha.remove();
     }, 1000);
 }
@@ -61,6 +63,7 @@ $(".placar").stop().slideToggle(1000);
 function sincronizaPlacar(){
 var placar = [];
 var linhas = $("tbody>tr");
+//iterar linha a linha para salvar no banco
 linhas.each(function (){
     var usuario = $(this).find("td:nth-child(1)").text();
     var palavras = $(this).find("td:nth-child(2)").text();
